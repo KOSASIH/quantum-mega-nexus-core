@@ -1,0 +1,31 @@
+// Smart Contract untuk manajemen node kuantum dalam jaringan terdesentralisasi
+pragma solidity ^0.8.0;
+
+contract QuantumNetwork {
+    struct Node {
+        address nodeAddress;
+        uint256 processingPower;
+        bool active;
+    }
+    
+    mapping(address => Node) public nodes;
+    address[] public activeNodes;
+
+    // Fungsi untuk menambahkan node baru ke jaringan
+    function addNode(uint256 _processingPower) public {
+        require(nodes[msg.sender].nodeAddress == address(0), "Node sudah ada");
+        nodes[msg.sender] = Node(msg.sender, _processingPower, true);
+        activeNodes.push(msg.sender);
+    }
+
+    // Fungsi untuk menonaktifkan node
+    function deactivateNode() public {
+        require(nodes[msg.sender].nodeAddress != address(0), "Node tidak ditemukan");
+        nodes[msg.sender].active = false;
+    }
+
+    // Mengembalikan semua node yang aktif
+    function getActiveNodes() public view returns (address[] memory) {
+        return activeNodes;
+    }
+}
