@@ -35,5 +35,5 @@ plotly==5.10.0                   # Interactive graphing library
 bokeh==2.4.2                     # Interactive visualization library
 
 # Additional libraries for specific use cases
-tensorflow==2.10.0               # Machine learning framework (if using deep learning)
+tensorflow==2.12.1               # Machine learning framework (if using deep learning)
 torch==1.12.1                    # PyTorch for deep learning (if needed)
