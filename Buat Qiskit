@@ -1,0 +1,21 @@
+from qiskit import QuantumCircuit, Aer, execute
+from qiskit.visualization import plot_histogram
+
+# Membuat Quantum Circuit dengan 2 qubit
+qc = QuantumCircuit(2)
+
+# Membuat entanglement (pengikatan kuantum)
+qc.h(0)  # Hadamard Gate di qubit pertama
+qc.cx(0, 1)  # Controlled-X gate, mengikat qubit ke-1 dan ke-2
+
+# Menambahkan pengukuran
+qc.measure_all()
+
+# Simulasi kuantum
+simulator = Aer.get_backend('qasm_simulator')
+job = execute(qc, simulator, shots=1000)
+result = job.result()
+
+# Visualisasi hasil
+counts = result.get_counts(qc)
+plot_histogram(counts)
