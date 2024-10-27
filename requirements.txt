@@ -27,7 +27,7 @@ flake8==4.0.1                    # Tool for checking the style guide enforcement
 python-dotenv==0.20.0            # For loading environment variables from .env files
 
 # Performance and optimization
-joblib==1.1.0                    # For lightweight pipelining in machine learning
+joblib==1.2.0                    # For lightweight pipelining in machine learning
 dask==2022.10.0                  # Parallel computing with task scheduling
 
 # Data visualization
