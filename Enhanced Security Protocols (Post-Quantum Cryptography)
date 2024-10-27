@@ -1,0 +1,14 @@
+# Mengimplementasikan enkripsi sederhana dengan pendekatan lattice-based
+from pqcrypto.kem import kyber512
+
+# Generate keypair (public dan private key)
+public_key, secret_key = kyber512.generate_keypair()
+
+# Enkripsi data
+ciphertext, shared_secret_sender = kyber512.encrypt(public_key)
+
+# Dekripsi data
+shared_secret_receiver = kyber512.decrypt(ciphertext, secret_key)
+
+assert shared_secret_sender == shared_secret_receiver  # Verifikasi kesamaan secret
+print("Shared secret established securely.")
