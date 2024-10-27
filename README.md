@@ -16,7 +16,7 @@
 [![Google Cloud Certified](https://img.shields.io/badge/Google%20Cloud-Certified-4285F4?style=flat&logo=googlecloud&logoColor=white)](https://cloud.google.com/certification/)
 [![CompTIA Certified](https://img.shields.io/badge/CompTIA-Certified-FFB300?style=flat&logo=comptia&logoColor=white)](https://www.comptia.org/)
 [![Cisco Certified](https://img.shields.io/badge/Cisco-Certified-1BA0E2?style=flat&logo=cisco&logoColor=white)](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications.html)
-[![PMI Certified](https://img.shields.io/b adge/PMI-Certified-FFC080?style=flat&logo=pmi&logoColor=white)](https://www.pmi.org/certification)
+[![PMI Certified](https://img.shields.io/badge/PMI-Certified-FFC080?style=flat&logo=pmi&logoColor=white)](https://www.pmi.org/certification)
 [![Six Sigma Certified](https://img.shields.io/badge/Six%20Sigma-Certified-FF69B4?style=flat&logo=sixsigma&logoColor=white)](https://www.sixsigma.com/)
 [![COBIT Certified](https://img.shields.io/badge/COBIT-Certified-4CAF50?style=flat&logo=cobit&logoColor=white)](https://www.isaca.org/cobit)
 [![TOGAF Certified](https://img.shields.io/badge/TOGAF-Certified-2196F3?style=flat&logo=togaf&logoColor=white)](https://www.opengroup.org/togaf)
