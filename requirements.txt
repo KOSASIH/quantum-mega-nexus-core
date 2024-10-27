@@ -1,0 +1,39 @@
+# Core dependencies
+Flask==2.2.2                     # Web framework for building APIs
+Flask-Cors==3.0.10               # CORS support for Flask
+SQLAlchemy==1.4.36               # SQL toolkit and Object-Relational Mapping (ORM)
+pandas==1.5.3                    # Data manipulation and analysis
+numpy==1.23.5                    # Numerical computing
+scikit-learn==1.1.3              # Machine learning library
+matplotlib==3.6.2                # Plotting library for visualizations
+seaborn==0.11.2                  # Statistical data visualization
+
+# Networking and communication
+requests==2.28.1                 # HTTP library for making requests
+websocket-client==1.4.2          # WebSocket client for real-time communication
+
+# Blockchain and cryptography
+pycryptodome==3.15.0             # Cryptographic library for secure data handling
+requests==2.28.1                 # For making HTTP requests to blockchain nodes
+
+# Testing and development
+pytest==7.2.0                    # Testing framework
+pytest-cov==3.0.0                # Coverage reporting for pytest
+mypy==0.991                      # Optional static type checker for Python
+black==22.3.0                    # Code formatter for maintaining code style
+flake8==4.0.1                    # Tool for checking the style guide enforcement
+
+# Environment management
+python-dotenv==0.20.0            # For loading environment variables from .env files
+
+# Performance and optimization
+joblib==1.1.0                    # For lightweight pipelining in machine learning
+dask==2022.10.0                  # Parallel computing with task scheduling
+
+# Data visualization
+plotly==5.10.0                   # Interactive graphing library
+bokeh==2.4.2                     # Interactive visualization library
+
+# Additional libraries for specific use cases
+tensorflow==2.10.0               # Machine learning framework (if using deep learning)
+torch==1.12.1                    # PyTorch for deep learning (if needed)
