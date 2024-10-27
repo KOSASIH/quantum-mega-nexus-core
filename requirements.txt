@@ -9,12 +9,12 @@ matplotlib==3.6.2                # Plotting library for visualizations
 seaborn==0.11.2                  # Statistical data visualization
 
 # Networking and communication
-requests==2.28.1                 # HTTP library for making requests
+requests==2.32.2                 # HTTP library for making requests
 websocket-client==1.4.2          # WebSocket client for real-time communication
 
 # Blockchain and cryptography
 pycryptodome==3.15.0             # Cryptographic library for secure data handling
-requests==2.28.1                 # For making HTTP requests to blockchain nodes
+requests==2.32.2                 # For making HTTP requests to blockchain nodes
 
 # Testing and development
 pytest==7.2.0                    # Testing framework
