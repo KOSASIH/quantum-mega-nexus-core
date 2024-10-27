@@ -20,7 +20,7 @@ requests==2.28.1                 # For making HTTP requests to blockchain nodes
 pytest==7.2.0                    # Testing framework
 pytest-cov==3.0.0                # Coverage reporting for pytest
 mypy==0.991                      # Optional static type checker for Python
-black==22.3.0                    # Code formatter for maintaining code style
+black==24.3.0                    # Code formatter for maintaining code style
 flake8==4.0.1                    # Tool for checking the style guide enforcement
 
 # Environment management
