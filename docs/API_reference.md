@@ -5,9 +5,7 @@ The Quantum Mega Nexus API provides developers with the tools to interact with t
 
 ## Base URL
 
-```
 [https://api.quantum-mega-nexus.org/v1](https://api.quantum-mega-nexus.org/v1) 
-```
 
 ## Endpoints
 
@@ -16,16 +14,16 @@ The Quantum Mega Nexus API provides developers with the tools to interact with t
 - **Method**: `POST`
 - **Description**: Submits a quantum job to the network.
 - **Request Body**:
-  
-  ```json
-  1 {
-  2   "job_name": "string",
-  3   "quantum_code": "string",
-  4   "parameters": {
-  5     "key": "value"
-  6   }
-  7 }
-  ```
+
+```json
+1 {
+2   "job_name": "string",
+3   "quantum_code": "string",
+4   "parameters": {
+5     "key": "value"
+6   }
+7 }
+```
 
 Response:
 
@@ -43,11 +41,9 @@ Response:
 - *"Endpoint**: /jobs/{job_id}
 - **Method**: GET
 - **Description**: Retrieves the status of a submitted job.
-
-Response:
-
-- **Status Code**: 200 OK
-- **Body**:
+- **Response**:
+   - **Status Code**: 200 OK
+   - **Body**:
 
 ```json
 1 {
@@ -61,11 +57,9 @@ Response:
 - **Endpoint**: /jobs/{job_id}/results
 - **Method**: GET
 - **Description**: Retrieves the results of a completed job.
-
-Response:
-
-- **Status Code**: 200 OK
-- **Body**:
+- **Response**:
+   - **Status Code**: 200 OK
+   - **Body**:
 
 ```json
 1 {
@@ -81,4 +75,19 @@ Response:
 ```
 
 # Error Handling
+
+All API responses include an error object in case of failure:
+
+```json
+1 {
+2   "error": {
+3     "code": "string",
+4     "message": "string"
+5  }
+6 }
+```
+
+# Conclusion
+
+The Quantum Mega Nexus API is designed to be intuitive and easy to use, enabling developers to leverage the power of quantum computing in their applications. For further assistance, please refer to the User Guide.
 
