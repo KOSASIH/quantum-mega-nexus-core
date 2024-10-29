@@ -1,0 +1,25 @@
+import tensorflow as tf
+from tensorflow.keras import layers, models
+from qiskit.circuit.library import RealAmplitudes
+from qiskit_machine_learning.kernels import QuantumKernel
+from qiskit_machine_learning.algorithms import VQC
+
+# Membuat layer Quantum
+def quantum_layer(inputs):
+    quantum_circuit = RealAmplitudes(num_qubits=3, reps=2)
+    kernel = QuantumKernel(feature_map=quantum_circuit)
+    # Definisikan layer sebagai bagian dari model
+    return VQC(quantum_circuit, kernel=kernel)(inputs)
+
+# Neural Network model dengan Quantum Layer
+inputs = tf.keras.Input(shape=(3,))
+x = layers.Dense(128, activation='relu')(inputs)
+x = layers.Dense(64, activation='relu')(x)
+quantum_output = quantum_layer(x)
+x = layers.Dense(32, activation='relu')(quantum_output)
+outputs = layers.Dense(1, activation='sigmoid')(x)
+
+model = models.Model(inputs=inputs, outputs=outputs)
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+print(model.summary())
