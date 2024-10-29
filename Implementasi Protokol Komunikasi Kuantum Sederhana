@@ -1,0 +1,16 @@
+Protokol komunikasi kuantum dapat menggunakan prinsip kunci kuantum. Berikut adalah contoh sederhana dari distribusi kunci kuantum.
+from qiskit import QuantumCircuit, execute, Aer
+
+# Membuat circuit untuk pembagian kunci kuantum
+alice_key = QuantumCircuit(1, 1)
+alice_key.h(0)  # Superposisi untuk random key generation
+alice_key.measure(0, 0)
+
+# Menjalankan simulasi
+backend = Aer.get_backend('qasm_simulator')
+job = execute(alice_key, backend, shots=1)
+result = job.result()
+counts = result.get_counts(alice_key)
+
+# Alice's key
+print("Kunci Kuantum dari Alice:", counts)
