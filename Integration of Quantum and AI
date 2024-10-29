@@ -1,0 +1,21 @@
+# Menggunakan Quantum Circuit untuk Optimisasi AI
+from qiskit.algorithms.optimizers import COBYLA
+from qiskit.utils import QuantumInstance
+
+# Optimizer berbasis kuantum
+quantum_instance = QuantumInstance(Aer.get_backend('statevector_simulator'))
+
+def quantum_model(weights):
+    # Model kuantum sederhana dengan parameter sebagai weights
+    qc = QuantumCircuit(2)
+    qc.ry(weights[0], 0)  # Rotasi kuantum pada qubit pertama
+    qc.ry(weights[1], 1)  # Rotasi kuantum pada qubit kedua
+    qc.cx(0, 1)  # Controlled X Gate
+    qc.measure_all()
+    return qc
+
+# Optimisasi model AI dengan Quantum Assistance
+optimizer = COBYLA(maxiter=100)
+result = optimizer.optimize(num_vars=2, objective_function=lambda x: -sum(x), initial_point=[0.1, 0.2])
+
+print("Optimized weights:", result)

@@ -1,0 +1,22 @@
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Membuat model AI sederhana
+def build_model():
+    model = models.Sequential()
+    model.add(layers.Dense(128, activation='relu', input_shape=(64,)))
+    model.add(layers.Dense(64, activation='relu'))
+    model.add(layers.Dense(1, activation='sigmoid'))  # Output binary classification
+    return model
+
+# Kompilasi dan pelatihan model
+model = build_model()
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Data simulasi (harus diisi dengan data nyata pada implementasi nyata)
+import numpy as np
+X_train = np.random.random((1000, 64))
+y_train = np.random.randint(2, size=(1000, 1))
+
+# Latihan model AI
+model.fit(X_train, y_train, epochs=10, batch_size=32)

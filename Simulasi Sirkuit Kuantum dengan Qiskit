@@ -1,0 +1,23 @@
+from qiskit import QuantumCircuit, transpile, Aer, execute
+from qiskit.visualization import plot_histogram
+
+# Membuat Quantum Circuit dengan 3 qubit
+qc = QuantumCircuit(3)
+
+# Menambahkan gerbang Hadamard untuk superposisi
+qc.h(0)
+qc.cx(0, 1)  # Gerbang CNOT antara qubit 0 dan 1
+qc.cx(1, 2)  # Gerbang CNOT antara qubit 1 dan 2
+
+# Menyelesaikan sirkuit dengan pengukuran
+qc.measure_all()
+
+# Menjalankan simulasi
+simulator = Aer.get_backend('qasm_simulator')
+compiled_circuit = transpile(qc, simulator)
+job = execute(compiled_circuit, backend=simulator, shots=1000)
+result = job.result()
+counts = result.get_counts()
+
+print("Hasil Simulasi Sirkuit Kuantum:")
+plot_histogram(counts)
