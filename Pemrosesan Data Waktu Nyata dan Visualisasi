@@ -1,0 +1,19 @@
+Pemrosesan data yang cepat dan visualisasi sangat penting. Di sini, kita menggunakan NumPy dan Matplotlib untuk real-time data analysis.
+import numpy as np
+import matplotlib.pyplot as plt
+from time import sleep
+
+# Simulasi data untuk analisis waktu nyata
+data = np.random.rand(100)
+
+plt.ion()  # Interactive mode
+fig, ax = plt.subplots()
+line, = ax.plot(data)
+
+for _ in range(100):
+    data = np.roll(data, -1)
+    data[-1] = np.random.rand()
+    line.set_ydata(data)
+    fig.canvas.draw()
+    fig.canvas.flush_events()
+    sleep(0.1)
